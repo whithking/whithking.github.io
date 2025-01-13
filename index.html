@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <!-- Swiper CSS - 用于轮播图 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Font Awesome - 用于图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">刘申奥</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+            <a href="#contact">联系</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- 轮播图部分 -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI助手展示">
+                <div class="slide-content">
+                    <h1>AI助手开发者</h1>
+                    <p>专注于AI助手开发与优化</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="编程工作照">
+                <div class="slide-content">
+                    <h1>全栈开发工程师</h1>
+                    <p>擅长Web开发和人工智能应用</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="项目展示">
+                <div class="slide-content">
+                    <h1>项目展示</h1>
+                    <p>查看我的开源项目和作品集</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- 个人简介部分 -->
+    <section class="about" id="about">
+        <div class="profile-image">
+            <img src="./imgs/lsa.jpg" alt="刘申奥的个人照片">
+        </div>
+        <div class="profile-content">
+            <h2>关于我</h2>
+            <p>这里是一段关于我的介绍文字。可以描述你的专业背景、兴趣爱好、技能等。</p>
+        </div>
+    </section>
+
+    <!-- 社交媒体链接 -->
+    <footer class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+    <!-- AI助手聊天界面 -->
+    <button class="chat-toggle-btn" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-header">
+            <h3>AI助手</h3>
+            <button class="minimize-btn" onclick="toggleChat()">-</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message ai">
+                <p>你好！我是AI助手，有什么可以帮你的吗？</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea id="user-input" placeholder="输入消息..." rows="1"></textarea>
+            <button onclick="sendMessage()">发送</button>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="script.js"></script>
+</body>
+</html> 
